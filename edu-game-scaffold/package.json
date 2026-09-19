@@ -1,0 +1,11 @@
+{
+  "name": "edu-game-scaffold",
+  "version": "0.1.0",
+  "description": "A constructionist design scaffold that guides students from a CS concept pitch through educational game design, AI-assisted prototyping, and publishing (local + optional live).",
+  "keywords": ["pi-package", "education", "game-design", "constructionism"],
+  "author": "",
+  "license": "MIT",
+  "pi": {
+    "skills": ["./skills"]
+  }
+}

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ML Machine Repair Quiz</title>
+  <style>
+    body {
+      max-width: 900px;
+      margin: 32px auto;
+      padding: 0 20px 40px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      background: #f8fafc;
+      color: #111827;
+    }
+    h1 { margin-bottom: 0.25rem; }
+    .instructions { color: #475569; margin-bottom: 2rem; }
+    .question {
+      background: white;
+      border: 1px solid #cbd5e1;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      box-shadow: 0 1px 4px rgba(15, 23, 42, 0.06);
+    }
+    .question h2 {
+      font-size: 1.05rem;
+      margin: 0 0 0.75rem;
+    }
+    ol {
+      margin: 0;
+      padding-left: 1.5rem;
+    }
+    li { margin: 0.35rem 0; }
+  </style>
+</head>
+<body>
+  <h1>ML Machine Repair Quiz</h1>
+  <p class="instructions">Choose the best answer for each question. These questions ask you to apply the same repair logic from the game: diagnose the data signal, identify the target or goal, interpret the pattern clue, and choose a fitting starting method.</p>
+
+  <section class="question">
+    <h2>1. A machine has past examples of engines labeled as “safe,” “needs inspection,” or “dangerous.” The sensor columns interact in messy ways, and the goal is the strongest first predictive repair. Which repair is most appropriate?</h2>
+    <ol type="A">
+      <li>Regression task with Linear Regression</li>
+      <li>Classification task with Random Forest</li>
+      <li>Clustering task with k-Means</li>
+      <li>Dimensionality reduction task with PCA</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>2. A player chooses “numeric output” for a machine whose goal is to assign each item to one of five known damage categories. What is the main diagnostic error?</h2>
+    <ol type="A">
+      <li>They confused labeled data with unlabeled data.</li>
+      <li>They confused nonlinear tabular data with high-dimensional compression.</li>
+      <li>They confused a category target with a regression target.</li>
+      <li>They confused similarity-based prediction with tree-based prediction.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>3. A repair probe using k-Means produces activity, but the machine still cannot predict “failed” versus “not failed” for new labeled examples. What is the best explanation?</h2>
+    <ol type="A">
+      <li>k-Means only works when the target is a continuous number.</li>
+      <li>k-Means is a linear classifier, so it cannot handle categories.</li>
+      <li>k-Means compresses correlated features but does not form groups.</li>
+      <li>k-Means is mainly a clustering method, so it is not built to predict known supervised labels.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>4. A machine has no labels. Engineers suspect several natural families of robot behavior and want the machine to discover those families. Which model behavior should the player look for?</h2>
+    <ol type="A">
+      <li>Predict a continuous numeric value from labeled examples.</li>
+      <li>Compare examples by similarity and form groups without known answers.</li>
+      <li>Estimate class probabilities from a mostly linear boundary.</li>
+      <li>Compress correlated features before another model uses them.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>5. A machine has 600 correlated sensor readings per example, but no target label. The repair goal is to reduce the signal into fewer components before later modeling. What is the best starting module?</h2>
+    <ol type="A">
+      <li>Logistic Regression</li>
+      <li>k-Means</li>
+      <li>PCA</li>
+      <li>Decision Tree</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>6. A player correctly identifies a regression task but chooses Logistic Regression as the final module. Why is this repair weak?</h2>
+    <ol type="A">
+      <li>Logistic Regression only works when there are no labels.</li>
+      <li>Logistic Regression is mainly for category prediction, not continuous numeric output.</li>
+      <li>Logistic Regression is only for compressing high-dimensional features.</li>
+      <li>Logistic Regression requires discovering unknown groups first.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>7. Two modules can both run on a labeled tabular classification machine. One is a single Decision Tree, and one is a Random Forest. The pattern clue says “nonlinear tabular signals,” and the repair goal emphasizes likely predictive strength. Which comparison is most accurate?</h2>
+    <ol type="A">
+      <li>Both are wrong because classification tasks require PCA.</li>
+      <li>Decision Tree is the only model that can use labeled examples.</li>
+      <li>Random Forest is usually the stronger starting point because it combines many trees and handles feature interactions better.</li>
+      <li>Decision Tree is always stronger because a single tree uses more models than a forest.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>8. A machine has labeled handwritten digit images, and the repair clue emphasizes that visually similar examples tend to share labels. Which starting behavior best matches that clue?</h2>
+    <ol type="A">
+      <li>Compress features without producing a digit prediction.</li>
+      <li>Find unlabeled clusters without using digit labels.</li>
+      <li>Predict a continuous numeric price.</li>
+      <li>Use nearby labeled examples to predict the digit.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>9. During the game, probing with incorrect diagnostic dials causes extra damage and noisy signals. What does that game behavior represent conceptually?</h2>
+    <ol type="A">
+      <li>Wrong models always improve performance if tested repeatedly.</li>
+      <li>A poor problem diagnosis makes model test results harder to interpret and more costly.</li>
+      <li>Unsupervised models require labels before they can form clusters.</li>
+      <li>Regression models cannot be evaluated on numeric outputs.</li>
+    </ol>
+  </section>
+
+  <section class="question">
+    <h2>10. A player sees labeled examples and immediately chooses Random Forest before checking the target/goal. The actual goal is to compress many correlated features, not predict a category or number. What should they have diagnosed first?</h2>
+    <ol type="A">
+      <li>The goal is classification, so any labeled examples require Logistic Regression.</li>
+      <li>The goal is clustering, so the labels should be used to train k-Means.</li>
+      <li>The goal is dimensionality reduction, so the repair needs feature compression rather than a supervised predictor.</li>
+      <li>The goal is regression, so the machine must predict a continuous number.</li>
+    </ol>
+  </section>
+</body>
+</html>
